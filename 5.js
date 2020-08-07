@@ -36,6 +36,14 @@ AA.prototype.say = function () {
     console.log(this.name)
 }
 function BB(name,age) {
-    AA.call(this,name)
+    AA.call(this,name)     // 借用构造函数, 第一次调用父类构造函数
+    this.age = age;
 }
+BB.prototype = new AA();  // 原型链继承, 第二次调用父类构造函数
+BB.prototype.constructor = BB;  // 将实例的原型上的构造函数指定为当前子类的构造函数
 
+let x = new BB('a',1)
+console.log(x)
+
+let s = new AA('b',1)
+console.log(s)
