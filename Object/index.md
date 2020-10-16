@@ -48,3 +48,9 @@ console.log(obj.g) //  undefined
 ```
 ### hasOwnProperty 这个方法检查对象是否拥有的该属性 返回 true false 该方法不会检查原型链
 ### delete 可以删除对象中的属性 该方法不会触及原型链 删除对象中的属性可以使原项链中的属性浮现出来
+```js
+({ strAddress: this.form.strAddress,strMobile:this.form.strMobile } = this.addInitInfo.dataMap); 
+// this.form.strAddress = this.addInitInfo.dataMap.strAddress;
+// this.form.strMobile = this.addInitInfo.dataMap.strMobile;
+```
+### es6解构赋值 上面的代码等同于下面的代码                
